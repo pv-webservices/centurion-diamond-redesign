@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss'
 import { geistSans, geistMono } from 'geist/font/sans'
-import { inter } from '@studio-freight/inter'
 
 const config: Config = {
   content: [
@@ -12,7 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         heading: [geistSans.variable, 'sans-serif'],
-        body: [inter.variable, 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
         mono: [geistMono.variable, 'monospace'],
       },
       colors: {

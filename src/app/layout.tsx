@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import { GeistSans } from 'geist/font/sans'
-import { Inter } from '@studio-freight/inter'
+import { Inter } from 'next/font/google'
 import "./globals.css"
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: "Centurion Diamond | 100 Facets. Engineered to Shine.",
@@ -22,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${Inter.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${inter.variable}`}>
       <body className="font-body antialiased">{children}</body>
     </html>
   )
